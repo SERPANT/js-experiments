@@ -71,7 +71,7 @@ function normalize(){
           }
           
           else
-          {
+          {      people.children=[];
                  newarr.push(people);
           }
       
