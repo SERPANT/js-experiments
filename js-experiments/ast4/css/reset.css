@@ -1,0 +1,13 @@
+*{
+    padding:0px;
+    margin: 0px;
+}
+
+.clearfix
+{
+    clear: both;
+}
+
+body{
+    background: black;
+}

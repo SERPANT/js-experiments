@@ -1,0 +1,80 @@
+.container{
+    
+    width: 800px;
+    height: 400px;
+   overflow: hidden;
+   position: relative;  
+}
+
+.container ul{
+    list-style: none;
+    display: block;
+    top:0px;
+    left:0px;
+   width: 7000px;
+   position: absolute;
+}
+
+.container ul li{
+    display: inline-block;
+}
+
+img{
+    width: 800px;
+    height: 400;
+}
+
+
+
+
+.btn
+{
+    font-size: 30px;
+    background: black;
+    border:none;
+    color: white;
+    opacity: .7;
+}
+
+.btn:hover{
+    color:red;
+}
+
+.dotElement{
+	position: absolute;	
+	left: 300px;
+	width: 100%; 
+}
+
+
+
+.dotElement span{
+	line-height: 20px;
+	padding: 0 10px;  
+    margin-left: 20px;
+	cursor: pointer;
+    background-image: url(../images/dot-icon.png)
+}
+
+.dotElement span.active{
+
+    background-image: url(../images/dot-icon-hover.png)
+}
+
+
+.dotElement span:hover{
+	
+    background-image: url(../images/dot-icon-hover.png)
+}
+
+
+
+.left,.right{
+    position: absolute;
+    margin-top: -250px;
+}
+
+.right{
+    margin-left: 785px;
+}
+
