@@ -8,43 +8,43 @@ function loopy() {
    
      
       var movieLists = [{
-          name: "Instant Queue",
+          name: 'Instant Queue',
           videos: [{
-              "id": 70111470,
-              "title": "Die Hard",
-              "boxarts": [{
+              'id': 70111470,
+              'title': 'Die Hard',
+              'boxarts': [{
                   width: 150,
                   height: 200,
-                  url: "http://cdn-0.nflximg.com/images/2891/DieHard150.jpg"
+                  url: 'http://cdn-0.nflximg.com/images/2891/DieHard150.jpg'
                 },
                 {
                   width: 200,
                   height: 200,
-                  url: "http://cdn-0.nflximg.com/images/2891/DieHard200.jpg"
+                  url: 'http://cdn-0.nflximg.com/images/2891/DieHard200.jpg'
                 }
               ],
-              "url": "http://api.netflix.com/catalog/titles/movies/70111470",
-              "rating": 4.0,
-              "bookmark": []
+              'url': 'http://api.netflix.com/catalog/titles/movies/70111470',
+              'rating': 4.0,
+              'bookmark': []
             },
             {
-              "id": 654356453,
-              "title": "Bad Boys",
-              "boxarts": [{
+              'id': 654356453,
+              'title': 'Bad Boys',
+              'boxarts': [{
                   width: 200,
                   height: 200,
-                  url: "http://cdn-0.nflximg.com/images/2891/BadBoys200.jpg"
+                  url: 'http://cdn-0.nflximg.com/images/2891/BadBoys200.jpg'
                 },
                 {
                   width: 150,
                   height: 200,
-                  url: "http://cdn-0.nflximg.com/images/2891/BadBoys150.jpg"
+                  url: 'http://cdn-0.nflximg.com/images/2891/BadBoys150.jpg'
                 }
     
               ],
-              "url": "http://api.netflix.com/catalog/titles/movies/70111470",
-              "rating": 5.0,
-              "bookmark": [{
+              'url': 'http://api.netflix.com/catalog/titles/movies/70111470',
+              'rating': 5.0,
+              'bookmark': [{
                 id: 432534,
                 time: 65876586
               }]
@@ -52,47 +52,47 @@ function loopy() {
           ]
         },
         {
-          name: "New Releases",
+          name: 'New Releases',
           videos: [{
-              "id": 65432445,
-              "title": "The Chamber",
-              "boxarts": [{
+              'id': 65432445,
+              'title': 'The Chamber',
+              'boxarts': [{
                   width: 150,
                   height: 200,
-                  url: "http://cdn-0.nflximg.com/images/2891/TheChamber150.jpg"
+                  url: 'http://cdn-0.nflximg.com/images/2891/TheChamber150.jpg'
                 },
                 {
                   width: 200,
                   height: 200,
-                  url: "http://cdn-0.nflximg.com/images/2891/TheChamber200.jpg"
+                  url: 'http://cdn-0.nflximg.com/images/2891/TheChamber200.jpg'
                 }
               ],
-              "url": "http://api.netflix.com/catalog/titles/movies/70111470",
-              "rating": 4.0,
-              "bookmark": []
+              'url': 'http://api.netflix.com/catalog/titles/movies/70111470',
+              'rating': 4.0,
+              'bookmark': []
             },
             {
-              "id": 675465,
-              "title": "Fracture",
-              "boxarts": [{
+              'id': 675465,
+              'title': 'Fracture',
+              'boxarts': [{
                   width: 200,
                   height: 200,
-                  url: "http://cdn-0.nflximg.com/images/2891/Fracture200.jpg"
+                  url: 'http://cdn-0.nflximg.com/images/2891/Fracture200.jpg'
                 },
                 {
                   width: 150,
                   height: 200,
-                  url: "http://cdn-0.nflximg.com/images/2891/Fracture150.jpg"
+                  url: 'http://cdn-0.nflximg.com/images/2891/Fracture150.jpg'
                 },
                 {
                   width: 300,
                   height: 200,
-                  url: "http://cdn-0.nflximg.com/images/2891/Fracture300.jpg"
+                  url: 'http://cdn-0.nflximg.com/images/2891/Fracture300.jpg'
                 }
               ],
-              "url": "http://api.netflix.com/catalog/titles/movies/70111470",
-              "rating": 5.0,
-              "bookmark": [{
+              'ur': 'http://api.netflix.com/catalog/titles/movies/70111470',
+              'rating': 5.0,
+              'bookmark': [{
                 id: 432534,
                 time: 65876586
               }]
@@ -126,24 +126,24 @@ function loopy() {
       ]; */
     
       
-      var newList=[];
+      var newList = [];
 
       //loop for movieList array
-      for(var type=0;type<movieLists.length;type++)
+      for(var type = 0 ; type < movieLists.length ; type++)
       {
           //loop for video arry
-          for(var video=0;video<movieLists[type].videos.length;video++)
+          for(var video = 0 ; video < movieLists[type].videos.length ; video++)
           {
             
               //loop for boxart arry
-              for(var boxart=0; boxart<movieLists[type].videos[video].boxarts.length;boxart++)
+              for(var boxart = 0; boxart<movieLists[type].videos[video].boxarts.length;boxart++)
               {
-                    var boxartobj=movieLists[type].videos[video].boxarts[boxart];
+                    var boxartobj = movieLists[type].videos[video].boxarts[boxart];
 
-                    if(boxartobj.width===150 && boxartobj.height===200)
+                    if(boxartobj.width === 150 && boxartobj.height === 200)
                     {
                             //creating a new object
-                              newobject={
+                              newobject = {
                                   id:movieLists[type].videos[video].id,
                                   title:movieLists[type].videos[video].title,
                                   boxart:boxartobj.url

@@ -2,16 +2,16 @@
 
 var imageul;
 var dotArray ;
-var preIndex=0;
 var animateRef;
 var numOfImages;
+var preIndex = 0;
 var refSlideTimer;
-var stepsToTake=1;
-var currentIndex=0;
-var imageUlShifted=0;
-var animationActive=0;  //tells if the animation is active or not
-var directionToMove=-1;
-var animationFramestime=0;
+var stepsToTake = 1;
+var currentIndex = 0;
+var imageUlShifted = 0;
+var animationActive = 0;  //tells if the animation is active or not
+var directionToMove = -1;
+var animationFramestime = 0;
 
 
 
@@ -20,8 +20,8 @@ var animationFramestime=0;
 //this initializes all the necessary component in the html page
 function componentInit()
 {
-    imageUl=document.getElementsByTagName("ul")[0];
-    var imgNo=imageUl.getElementsByTagName("img");
+    imageUl=document.getElementsByTagName('ul')[0];
+    var imgNo=imageUl.getElementsByTagName('img');
 
     numOfImages=imgNo.length;
 
@@ -36,11 +36,11 @@ function componentInit()
 //initialize the left and right button
 function initButton()
 {
-    var leftFunction=function(){
+    var leftFunction=function() {
 
         //checking animation is active or not
-        if(currentIndex>0 && animationActive===0){
-            animationActive=1;
+        if(currentIndex > 0 && animationActive === 0) {
+            animationActive = 1;
 
             preIndex=currentIndex;
             currentIndex--;
@@ -49,11 +49,11 @@ function initButton()
         }
     };
 
-    var rightFunction=function(){
+    var rightFunction=function() {
 
           //checking animation is active or not
-        if(currentIndex<3 && animationActive===0){
-            animationActive=1;
+        if(currentIndex < 3 && animationActive === 0) {
+            animationActive = 1;
             preIndex=currentIndex;
             currentIndex++;
             animate(-1);
@@ -74,16 +74,16 @@ function initButton()
  * @param {function} functionToExecute this is the function to be executed when the button is clicked
  */
 
-function createButton(className,buttonContent,functionToExecute){
+function createButton(className,buttonContent,functionToExecute) {
+
     var btncontainer= document.getElementsByClassName(className)[0];
 
-    
     var btn = document.createElement('button');
     btn.setAttribute('content', 'test content');
     btn.setAttribute('class', 'btn');
     btn.innerHTML = buttonContent;
 
-    btn.onclick=functionToExecute;
+    btn.onclick = functionToExecute;
 
     btncontainer.appendChild(btn);
 }
@@ -95,16 +95,16 @@ function createButton(className,buttonContent,functionToExecute){
 
 //creates teh dot element
 function  createDotElement(){
-    var boxContainer= document.getElementsByClassName("boxes")[0];
-    var dotElement = document.createElement("div");
-    dotElement.setAttribute("class", "dotElement");
+    var boxContainer= document.getElementsByClassName('boxes')[0];
+    var dotElement = document.createElement('div');
+    dotElement.setAttribute('class', 'dotElement');
      dotArray = [];
 
     for(var i=0;i<numOfImages;i++)
     {
-        var dotItem = document.createElement("span");
+        var dotItem = document.createElement('span');
         //dotItem.setAttribute("class", "dot-item");
-        dotItem.innerHTML = "&nbsp;";
+        dotItem.innerHTML = '&nbsp;';
         dotItem.onclick=(function(index){
             return function()
             {
@@ -203,7 +203,7 @@ function animate(nextStep)
         }  
         if(imageUlShifted>=(numOfImages*-800) || imageUlShifted<=0)
         {
-             imageUl.style.marginLeft=imageUlShifted+"px";
+             imageUl.style.marginLeft=imageUlShifted+'px';
         }
         animationFramestime++;
     },1);
@@ -231,8 +231,8 @@ function animateOver()
 
 function updateDotElement()
 {
-   dotArray[preIndex].classList.remove("active");
-    dotArray[currentIndex].classList.add("active");
+   dotArray[preIndex].classList.remove('active');
+    dotArray[currentIndex].classList.add('active');
 }
 
 //initialze component
